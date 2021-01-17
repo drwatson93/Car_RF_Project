@@ -31,43 +31,28 @@ class PortiaItem(scrapy.Item):
         return string
 
 
-class FordMustangEcoboostForSaleInMiamiCarscoItem(PortiaItem):
-    Title = scrapy.Field(
-        input_processor=Text(),
-        output_processor=Join(),
-    )
-    Miles = scrapy.Field(
-        input_processor=Text(),
-        output_processor=Join(),
-    )
-    Fuel_Type = scrapy.Field(
-        input_processor=Text(),
-        output_processor=Join(),
-    )
-    Price = scrapy.Field(
-        input_processor=Price(),
-        output_processor=Join(),
-    )
-
-
 class NewUsedFordMustangsForSaleInDavieFlAuItem(PortiaItem):
-    link = scrapy.Field(
-        input_processor=Url(),
-        output_processor=Join(),
-    )
-    Title = scrapy.Field(
+    body = scrapy.Field(
         input_processor=Text(),
         output_processor=Join(),
     )
-    Miles = scrapy.Field(
+    title = scrapy.Field(
         input_processor=Text(),
         output_processor=Join(),
     )
-    Price = scrapy.Field(
-        input_processor=Price(),
-        output_processor=Join(),
-    )
-    img = scrapy.Field(
+    pic = scrapy.Field(
         input_processor=Image(),
+        output_processor=Join(),
+    )
+    stock_num = scrapy.Field(
+        input_processor=Text(),
+        output_processor=Join(),
+    )
+    price = scrapy.Field(
+        input_processor=Text(),
+        output_processor=Join(),
+    )
+    miles = scrapy.Field(
+        input_processor=Text(),
         output_processor=Join(),
     )
